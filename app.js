@@ -18,6 +18,9 @@ mongoose.connect(
 
 const app = express();
 
+// Mongoose promise for depracated warnings
+mongoose.Promise = global.Promise;
+
 // Middleware
 app.use(morgan('dev'));
 app.use(express.json());
